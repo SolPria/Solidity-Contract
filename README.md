@@ -11,7 +11,6 @@ This contract has two functions: mint and burn.
 The mint function is used to add tokens to an address. The function takes two parameters: _address, which is the address to receive the tokens, and _value, which is the number of tokens to mint.
 
 ```solidity
-Copy code
 function mint(address _address, uint _value) public {
     totalSupply += _value;
     balances[_address] += _value;
@@ -22,7 +21,6 @@ function mint(address _address, uint _value) public {
 The burn function is used to remove tokens from an address. The function takes two parameters: _address, which is the address to burn the tokens from, and _value, which is the number of tokens to burn.
 
 ```solidity
-Copy code
 function burn(address _address, uint _value) public {
     if (balances[_address] >= _value) {
         totalSupply -= _value;
